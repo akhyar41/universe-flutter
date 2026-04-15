@@ -1,4 +1,4 @@
-package com.ketant.mobile
+package com.universe.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 
