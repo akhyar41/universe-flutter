@@ -15,7 +15,7 @@ class MeetingFormScreen extends GetView<MeetingFormController> {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 0,
-        title: Obx(() => Text(controller.isEditing.value ? "Edit Rapat" : "Rapat Baru")),
+        title: Obx(() => Text("Form Rapat")),
         actions: [
           Obx(
             () => TextButton(
@@ -107,7 +107,7 @@ class MeetingFormScreen extends GetView<MeetingFormController> {
               const SizedBox(height: 32),
               Obx(
                 () => AppButton(
-                  label: controller.isEditing.value ? "Perbarui Rapat" : "Simpan Rapat",
+                  label: "Simpan",
                   onPressed: controller.save,
                   isLoading: controller.isLoading.value,
                 ),
