@@ -19,14 +19,15 @@ class SplashScreen extends GetView<SplashController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(height: 180),
               Container(
-                width: 100,
-                height: 100,
+                width: 160,
+                height: 160,
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.2),
-                  borderRadius: BorderRadius.circular(24),
+                  color: Colors.white.withValues(alpha: 0.8),
+                  borderRadius: BorderRadius.circular(48),
                 ),
-                child: const Icon(Icons.description_outlined, size: 56, color: Colors.white),
+                child: const Icon(Icons.description_outlined, size: 120, color: AppColors.primary),
               ),
               const SizedBox(height: 24),
               Text("MoM Note", style: AppTextStyles.h1.copyWith(color: Colors.white, fontSize: 32)),
