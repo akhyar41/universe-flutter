@@ -21,6 +21,7 @@ class LoginScreen extends GetView<LoginController> {
         elevation: 0,
         systemOverlayStyle: AppTheme.systemBarLight,
         automaticallyImplyLeading: false,
+        shape: const Border(),
       ),
       body: SafeArea(
         child: Center(

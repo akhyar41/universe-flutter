@@ -1,11 +1,11 @@
 import "package:flutter/material.dart";
 import "package:get/get.dart";
 
+import "../../../_components/widgets/app_button.dart";
+import "../../../_components/widgets/app_text_field.dart";
 import "../../../themes/app_colors.dart";
 import "../../../themes/app_text_styles.dart";
 import "../../../themes/app_theme.dart";
-import "../../../_components/widgets/app_button.dart";
-import "../../../_components/widgets/app_text_field.dart";
 import "register_controller.dart";
 
 class RegisterScreen extends GetView<RegisterController> {
@@ -17,8 +17,8 @@ class RegisterScreen extends GetView<RegisterController> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         foregroundColor: AppColors.textPrimary,
-        elevation: 0,
         systemOverlayStyle: AppTheme.systemBarLight,
+        shape: const Border(),
       ),
       body: SafeArea(
         child: Center(
