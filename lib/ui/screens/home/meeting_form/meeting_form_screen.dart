@@ -1,10 +1,11 @@
 import "package:flutter/material.dart";
 import "package:get/get.dart";
-import "../../../themes/app_colors.dart";
-import "../../../themes/app_text_styles.dart";
+
 import "../../../../core/utils/date_formatter.dart";
 import "../../../_components/widgets/app_button.dart";
 import "../../../_components/widgets/app_text_field.dart";
+import "../../../themes/app_colors.dart";
+import "../../../themes/app_text_styles.dart";
 import "meeting_form_controller.dart";
 
 class MeetingFormScreen extends GetView<MeetingFormController> {
@@ -15,24 +16,7 @@ class MeetingFormScreen extends GetView<MeetingFormController> {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 0,
-        title: Obx(() => Text("Form Rapat")),
-        actions: [
-          Obx(
-            () => TextButton(
-              onPressed: controller.isLoading.value ? null : controller.save,
-              child: controller.isLoading.value
-                  ? const SizedBox(
-                      width: 18,
-                      height: 18,
-                      child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2),
-                    )
-                  : const Text(
-                      "Simpan",
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-                    ),
-            ),
-          ),
-        ],
+        title: Text("Form Rapat"),
       ),
       body: Form(
         key: controller.formKey,
@@ -105,13 +89,7 @@ class MeetingFormScreen extends GetView<MeetingFormController> {
                 prefixIcon: Icons.notes,
               ),
               const SizedBox(height: 32),
-              Obx(
-                () => AppButton(
-                  label: "Simpan",
-                  onPressed: controller.save,
-                  isLoading: controller.isLoading.value,
-                ),
-              ),
+              Obx(() => AppButton(label: "Simpan", onPressed: controller.save, isLoading: controller.isLoading.value)),
               const SizedBox(height: 24),
             ],
           ),
